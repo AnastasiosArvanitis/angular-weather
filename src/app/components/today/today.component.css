@@ -1,0 +1,28 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  height: auto;
+  margin: auto;
+  padding: 30px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6);
+  background: #a3a3b2;
+  font-size: 1.2em;
+}
+
+.search-area {
+  margin-bottom: 50px;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  width: 350px;
+}
+
+.descr {
+  padding-top: 18px;
+}
