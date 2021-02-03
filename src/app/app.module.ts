@@ -9,8 +9,6 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodayComponent } from './components/today/today.component';
 
-import { AgmCoreModule } from '@agm/core';
-
 // noinspection AngularInvalidImportedOrDeclaredSymbol
 @NgModule({
   declarations: [
@@ -23,10 +21,7 @@ import { AgmCoreModule } from '@agm/core';
     BrowserModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    HttpClientModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD9c8MJFJGor3v50yyVW2kCixq1vN5qC6A'
-    })
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
