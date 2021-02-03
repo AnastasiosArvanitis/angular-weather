@@ -8,6 +8,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodayComponent } from './components/today/today.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 // noinspection AngularInvalidImportedOrDeclaredSymbol
 @NgModule({
@@ -21,7 +22,8 @@ import { TodayComponent } from './components/today/today.component';
     BrowserModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
