@@ -5,7 +5,7 @@
     <button (click)="getCity(userInput.value)">Search</button>
   </div>
 
-  <h2>Weather in {{ weather.name }}, {{ weather.sys.country }}</h2>
+  <!--<h2>Weather in {{ weather.name }}, {{ weather.sys.country }}</h2>-->
 
   <mat-spinner *ngIf="loading"></mat-spinner>
 
@@ -14,7 +14,8 @@
   <p *ngIf="cityNotFound">{{ message }}</p>
 
   <div *ngIf="weather && !cityNotFound" class="weather-details">
-
+    <div><span class="title">Weather in </span></div>
+    <div><span class="title">{{ weather.name }}, {{ weather.sys.country }}</span></div>
     <p><img width="60px" src="http://openweathermap.org/img/wn/{{ weather.weather[0].icon }}.png" alt=""></p>
     <p class="descr">{{ weather.weather[0].description }}, {{ weather.main.temp }}C</p>
     <p>Feels like:</p><p> {{ weather.main.feels_like }}</p>

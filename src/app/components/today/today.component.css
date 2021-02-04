@@ -26,3 +26,8 @@
 .descr {
   padding-top: 18px;
 }
+
+.title {
+  font-size: 1.4em;
+  font-weight: bold;
+}

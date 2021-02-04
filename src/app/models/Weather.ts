@@ -29,4 +29,5 @@ export class Weather {
     }
   ];
   name: string;
+  cod: string;
 }

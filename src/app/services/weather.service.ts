@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {Weather} from '../models/Weather';
 
 
 @Injectable({
@@ -12,23 +13,23 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  getWeatherDataByCords(lat, lon): Observable<any> {
+  getWeatherDataByCords(lat, lon): Observable<Weather> {
     const params = new HttpParams()
       .set('lat', lat)
       .set('lon', lon)
       .set('units', 'metric')
       .set('appid', this.apiKey);
 
-    return this.http.get(this.url, { params });
+    return this.http.get<Weather>(this.url, { params });
   }
 
-  getWeatherDataByCityName(cityName: string): Observable<any> {
+  getWeatherDataByCityName(cityName: string): Observable<Weather> {
     const params = new HttpParams()
       .set('q', cityName)
       .set('units', 'metric')
       .set('appid', this.apiKey);
 
-    return this.http.get(this.url, { params });
+    return this.http.get<Weather>(this.url, { params });
   }
 
 }
